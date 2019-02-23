@@ -1,29 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <router-link to="/" tag="span" style="cursor: pointer">
+          GNAG
+        </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <!--<router-link class="menu-items" v-for="item in menuItems" :key="item.title" :to="item.path">-->
+        <!--{{item.title}}-->
+      <!--</router-link>-->
+    </v-toolbar>
+
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import HelloWorld from './components/HelloWorld'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  },
+  data () {
+    return {
+      menuItems: [
+        // { title: 'Home', path: '/',},
+        // { title: 'Sign Up', path: '/signup',},
+        // { title: 'Sign In', path: '/signin',}
+      ]
     }
   }
 }
+</script>
+
+<style>
+  .menu-items {
+    padding: 1em;
+  }
 </style>
