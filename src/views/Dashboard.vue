@@ -6,12 +6,11 @@
 </template>
 
 <script>
-    import firebase from 'firebase'
     export default {
         name: "Dashboard",
         methods: {
             logOut() {
-                firebase.auth().signOut();
+                this.$firebase.auth().signOut();
             }
         }
     }
