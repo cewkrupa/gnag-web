@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # GNAG-WEB
 front end for GNAG
 =======
@@ -36,4 +35,3 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> init
