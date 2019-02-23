@@ -1,0 +1,22 @@
+diff a/src/main.ts b/src/main.ts	(rejected hunks)
+@@ -6,3 +6,3 @@ import './registerServiceWorker';
+-import Vuetify from 'vuetify'
+-import * as firebase from 'firebase'
+-import { config } from './firebaseConfig'
++import Vuetify from 'vuetify';
++import * as firebase from 'firebase';
++import { config } from './firebaseConfig';
+@@ -11 +11 @@ Vue.config.productionTip = false;
+-Vue.use(Vuetify)
++Vue.use(Vuetify);
+@@ -16 +16 @@ new Vue({
+-  created: function() {
++  created() {
+@@ -19,2 +19,2 @@ new Vue({
+-      if(user) {
+-        this.$router.push('/dashboard')
++      if (user) {
++        this.$router.push('/dashboard');
+@@ -22 +22 @@ new Vue({
+-        this.$router.push('/sign-in')
++        this.$router.push('/sign-in');

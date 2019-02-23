@@ -7,9 +7,9 @@
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <!--<router-link class="menu-items" v-for="item in menuItems" :key="item.title" :to="item.path">-->
-        <!--{{item.title}}-->
-      <!--</router-link>-->
+      <router-link class="menu-items" v-for="item in menuItems" :key="item.title" :to="item.path">
+        {{item.title}}
+      </router-link>
     </v-toolbar>
 
     <v-content>
@@ -19,19 +19,18 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Home from './views/Home'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
   },
   data () {
     return {
       menuItems: [
-        // { title: 'Home', path: '/',},
-        // { title: 'Sign Up', path: '/signup',},
-        // { title: 'Sign In', path: '/signin',}
+        { title: 'Home', path: '/',},
+        { title: 'Sign In', path: '/sign-in',}
       ]
     }
   }

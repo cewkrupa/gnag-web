@@ -1,0 +1,4 @@
+diff a/src/firebaseConfig.ts b/src/firebaseConfig.ts	(rejected hunks)
+@@ -7 +7 @@ export const config = {
+-    messagingSenderId: '358531339316'
++    messagingSenderId: '358531339316',
