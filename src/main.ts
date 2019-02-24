@@ -19,11 +19,15 @@ new Vue({
     firebase.auth().onAuthStateChanged((user) => {
       if(user) {
         this.$store.dispatch('setUser')
-        this.$store.dispatch('toggleIsAuthorized')
+        this.$store.commit('setIsAuthorized', true)
         console.log("onAuthState: " + user.email)
+        console.log("isAuthorized: " + this.$store.state.isAuthorized)
       }
       else {
+        this.$store.commit('setIsAuthorized', false)
         console.log('logged out ')
+        console.log("isAuthorized: " + this.$store.state.isAuthorized)
+
       }
     });
   },

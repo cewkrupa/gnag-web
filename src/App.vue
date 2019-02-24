@@ -52,7 +52,8 @@ export default {
     return {
       menuItems: [
         { title: 'Home', path: '/',},
-        { title: 'Sign In', path: '/sign-in',}
+        { title: 'Sign In', path: '/sign-in',},
+        { title: 'Dashboard', path: '/dashboard'}
       ]
     }
   }

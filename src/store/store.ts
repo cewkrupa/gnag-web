@@ -12,8 +12,8 @@ export const store = new Vuex.Store({
     setUser: state => {
       state.user = firebase.auth().currentUser;
     },
-    toggleIsAuthorized: state => {
-      state.isAuthorized ? state.isAuthorized = false : state.isAuthorized = true
+    setIsAuthorized: (state, p) => {
+      state.isAuthorized = p
     }
   },
   getters: {
@@ -27,9 +27,6 @@ export const store = new Vuex.Store({
   actions: {
     setUser: context => {
       context.commit('setUser');
-    },
-    toggleIsAuthorized: context => {
-      context.commit('toggleIsAuthorized')
     }
   }
 });

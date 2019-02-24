@@ -26,7 +26,8 @@ export default new Router({
       name: 'dashboard',
       component: Dashboard,
       beforeEnter: (to, from, next) => {
-        if(store.state.isAuthorized) {
+          console.log("route authorized: " + store.getters.getIsAuthorized)
+        if(!store.getters.getIsAuthorized) {
           next('/sign-in')
         } else {
           next()
