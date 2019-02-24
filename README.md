@@ -2,6 +2,7 @@
 front end for GNAG
 =======
 # gnag-web
+GNAG stands for Group Notes And Gnag.
 
 ## Project setup
 ```
