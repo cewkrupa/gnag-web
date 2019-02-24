@@ -7,6 +7,7 @@
                 <v-text-field v-if="edit" full-width no-details class="list-text edit" v-model="item.text" @blur="edit=false" v-focus.lazy="edit">
                 </v-text-field>
                 <p class="list-text" @click="edit=true" v-else>{{item.text}}</p>
+                <v-btn color="red" icon @click="$emit('item-remove', itemId)"><v-icon>remove</v-icon></v-btn>
             </v-flex>
         </v-layout>
     </v-container>
@@ -26,7 +27,8 @@
         mixins: [focusMixin],
         name: "ListItem",
         props: {
-          itemId: Number
+            itemId: Number,
+            index: Number
         },
         data() {
             return {
