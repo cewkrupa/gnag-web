@@ -2,26 +2,26 @@
    <v-container fluid>
     <v-layout column>
       <v-flex>
-               <v-layout row >
+               <v-layout row wrap>
 
-                  <v-flex xs:3>
+                  <v-flex xs4>
                <dashbutton :source = "require('../assets/settings.svg')" text = "Settings" link = "Settings" />
                   </v-flex>
-                  <v-flex xs:3>
+                  <v-flex xs4>
                <dashbutton :source = "require('../assets/groups.svg')" text = "Groups" link = "Settings" />
                   </v-flex>
-                  <v-flex xs:3>
+                  <v-flex xs4>
                <dashbutton :source = "require('../assets/messages.svg')" text = "Messages" link = "Settings" />
                   </v-flex>
 
 
-                  <v-flex xs:3>
+                  <v-flex xs4>
                <dashbutton :source = "require('../assets/noose.svg')" text = "Suicide Letters" link = "Settings" />
                   </v-flex>
-               <v-flex xs:3>
+               <v-flex xs4>
                <dashbutton :source = "require('../assets/marriage.svg')" text = "Marriage Certificates" link = "Settings" />
                   </v-flex>
-               <v-flex xs:3>
+               <v-flex xs4>
                <dashbutton :source = "require('../assets/notes.svg')" text = "Personal Notes" link = "Settings" />
                   </v-flex>
                </v-layout>
