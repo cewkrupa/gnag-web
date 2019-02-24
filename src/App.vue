@@ -31,7 +31,7 @@ export default {
     Home
   },
   methods: {
-    ...mapActions(['setUser', "toggleIsAuthorized"]),
+    ...mapActions(['setUser']),
     logOut() {
       this.$firebase.auth().signOut();
     }

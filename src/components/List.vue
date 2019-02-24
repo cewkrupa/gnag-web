@@ -3,8 +3,8 @@
         <ListItem
                 v-for="(item, index) in myList"
                 v-bind:item-id="item.id"
-                v-bind:item-index="index"
-                v-on:item-remove="removeItem($event)"
+                v-bind:key="item.id"
+                v-on:item-remove="deleteItemFromListById($event)"
                 class="list-item">
         </ListItem>
         <v-container>
@@ -28,6 +28,7 @@
 
 <script>
     import ListItem from "./ListItem";
+    import { mapMutations } from 'vuex'
 
     export default {
         name: "List",
@@ -50,10 +51,7 @@
                 });
                 this.newText = ''
             },
-            removeItem(index) {
-                console.log("removed item at " + index );
-                this.myList.splice(index - 1, 1)
-            }
+            ...mapMutations(['deleteItemFromListById'])
         }
     }
 </script>

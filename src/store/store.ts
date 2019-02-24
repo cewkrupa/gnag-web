@@ -31,22 +31,27 @@ export const store = new Vuex.Store({
     },
     setIsAuthorized: (state, p) => {
       state.isAuthorized = p
+    },
+    deleteItemFromListById: (state, id) => {
+        let itemIndex = state.list.findIndex(item => item.id === id)
+        state.list.splice(itemIndex,1)
+        console.log('removed item at index ' + itemIndex)
     }
   },
   getters: {
     getUser: state => {
-      return state.user
+        return state.user
     },
     getIsAuthorized: state => {
-      return state.isAuthorized
+        return state.isAuthorized
     },
-      getItemFromListById: (state) => (id: Number) => {
+    getItemFromListById: (state) => (id: Number) => {
         return state.list.find(item => item.id === id)
-      }
+    }
   },
   actions: {
     setUser: context => {
       context.commit('setUser');
-    }
+    },
   }
 });

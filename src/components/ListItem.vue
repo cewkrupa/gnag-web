@@ -28,7 +28,6 @@
         name: "ListItem",
         props: {
             itemId: Number,
-            index: Number
         },
         data() {
             return {
