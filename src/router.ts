@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/views/Home.vue';
 import SignIn from '@/views/SignIn.vue';
 import Dashboard from '@/views/Dashboard.vue';
+import Settings from '@/views/Settings.vue'
 import { store } from './store/store'
 
 Vue.use(Router);
@@ -34,9 +35,10 @@ export default new Router({
         }
       }
     },
-    // {
-    //   path: '*',
-    //   redirect: '/home'
-    // }
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings,
+    }
   ],
 });

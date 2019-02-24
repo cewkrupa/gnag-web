@@ -1,10 +1,9 @@
 <template>
-   <v-container>
+<v-container>
    <a :href="link">
-
       <v-flex>
-         <v-card>
-            <v-img class = "" :src="source" contain height = "200"></v-img>
+         <v-card class="dash-card">
+            <v-img :src="source" contain height = "200"></v-img>
             <v-layout class="justify-center">
                <v-card-title primary-title>
                   <div>
@@ -22,11 +21,15 @@
 
 
    export default {
+      name: 'DashButton',
       props: ['source', 'text', 'link']
    }
 
 </script>
 
 <style>
+   .dash-card {
+      padding-top: 2em;
+   }
 
 </style>
